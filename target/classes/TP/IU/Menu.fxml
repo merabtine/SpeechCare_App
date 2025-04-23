@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.MenuController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="277.0" style="-fx-background-color: ffff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="150.0" layoutX="69.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ortho.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonPatients" layoutX="2.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleButtonPatients" prefHeight="63.0" prefWidth="275.0" style="-fx-background-color: ffff;" text="Patients" textFill="#591c70">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <ImageView fx:id="imgUser" fitHeight="48.0" fitWidth="43.0" layoutX="29.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/user.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonDossiers" layoutX="-2.0" layoutY="221.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="278.0" style="-fx-background-color: ffff;" text="Dossiers" textFill="#591c70" onAction="#handleButtonDossiers">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <ImageView fitHeight="44.0" fitWidth="48.0" layoutX="25.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/folder.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonRendezVous" layoutX="-1.0" layoutY="299.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="276.0" style="-fx-background-color: ffff;" text="      Rendez-vous" textFill="#591c70" onAction="#handleButtonRendezVous">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="25.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/rdv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="-3.0" prefHeight="508.0" prefWidth="426.0" style="-fx-background-color: #591c70;">
+               <children>
+                  <Button fx:id="ProgrammerButton" layoutX="31.0" layoutY="144.0" mnemonicParsing="false" prefHeight="169.0" prefWidth="130.0" style="-fx-background-color: ffff;" onAction="#RDV"/>
+                  <ImageView fitHeight="84.0" fitWidth="81.0" layoutX="55.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/agenda.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#2596be" layoutX="44.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rendez-vous">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2596be" layoutX="50.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="AjoutQstAnamnese" layoutX="253.0" layoutY="146.0" mnemonicParsing="false" prefHeight="162.0" prefWidth="129.0" style="-fx-background-color: ffff;"  onAction="#handleButtonAnamnese"/>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="284.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/quest.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#2596be" layoutX="267.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2596be" layoutX="279.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="question ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2596be" layoutX="270.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="d'anamnèse">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="134.0" layoutY="327.0" mnemonicParsing="false" prefHeight="173.0" prefWidth="135.0" style="-fx-background-color: ffff;" />
+                  <ImageView fitHeight="86.0" fitWidth="104.0" layoutX="158.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Cyberlink-Icon-Log-Management-Green-01.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#2596be" layoutX="153.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2596be" layoutX="161.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="question">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2596be" layoutX="173.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="de test">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#e386a5" layoutX="29.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parler, écouter, grandir ensemble.">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="36.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/8327522.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="87.0" fitWidth="124.0" layoutX="147.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/boy-listening-music-9276752-7558312.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="73.0" fitWidth="112.0" layoutX="283.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/section14-img01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

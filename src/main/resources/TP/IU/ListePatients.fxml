@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.PatientsController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+         <top>
+            <HBox spacing="10" alignment="CENTER">
+               <ImageView fx:id="home" fitHeight="40.0" fitWidth="38.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleButtonMenu">
+                  <image>
+                     <Image url="@img/image.png" />
+                  </image>
+               </ImageView>
+               <Text fill="#5a215b" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des patients">
+                  <font>
+                     <Font size="36.0" />
+                  </font>
+                  <HBox.margin>
+                     <javafx.geometry.Insets top="5.0"/>
+                  </HBox.margin>
+               </Text>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="patientsTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="nomColumn" prefWidth="121.55555045604706" style="-fx-background-color: #5a215b, ffff; -fx-border-color: #5a215b" text="Nom" />
+                  <TableColumn fx:id="prenomColumn" prefWidth="127.33338165283203" style="-fx-background-color: #5a215b, ffff; -fx-border-color: #5a215b" text="Prenom" />
+                  <TableColumn fx:id="dateNaissanceColumn" prefWidth="138.44444274902344" style="-fx-background-color: #5a215b, ffff;-fx-border-color: #5a215b" text="Date de naissance" />
+                  <TableColumn fx:id="lieuNaissanceColumn" minWidth="0.0" prefWidth="115.77774047851562" style="-fx-background-color: #5a215b, ffff; -fx-border-color: #5a215b" text="Lieu de naissance" />
+                  <TableColumn fx:id="numTelColumn" prefWidth="117.55560302734375" style="-fx-background-color: #5a215b, ffff; -fx-border-color: #5a215b" text="Numéro telephone" />
+                  <TableColumn fx:id="typeColumn" prefWidth="77.77777099609375" style="-fx-background-color: #5a215b, ffff;-fx-border-color: #5a215b" text="Type" />
+               </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

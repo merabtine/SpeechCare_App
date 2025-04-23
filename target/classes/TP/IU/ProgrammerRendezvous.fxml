@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.ProgrammerRDV">
+   <top>
+      <AnchorPane prefHeight="81.0" prefWidth="693.0" style="-fx-background-color: #ede5ff; -fx-background-radius: 0;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="137.0" prefWidth="683.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #5b3f5b;">
+               <children>
+                  <Label layoutX="223.0" layoutY="15.0" prefHeight="107.0" prefWidth="361.0" style="-fx-background-color: #ede5ff; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #5b3f5b;" text="                Programmer&#10;    un nouveau Rendez-vous" textFill="#5b3f5b">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="122.0" fitWidth="137.0" layoutX="24.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Screenshot 2024-05-19 202402.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="home" fitHeight="20.0" fitWidth="37.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleButtonMenu">
+                     <image>
+                        <Image url="@img/130831.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="403.0" prefWidth="700.0" style="-fx-background-color: #ede5ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="choiceBox" layoutX="216.0" layoutY="147.0" prefHeight="28.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #5b3f5b;" />
+            <DatePicker fx:id="datePicker" layoutX="31.0" layoutY="54.0" prefHeight="28.0" prefWidth="267.0" style="-fx-background-color: transparent; -fx-background-radius: 5; -fx-border-color: #5b3f5b; -fx-border-radius: 5;" />
+            <Label layoutX="83.0" layoutY="29.0" text="Selectionner une date" textFill="#5b3f5b">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="timeTextField" layoutX="401.0" layoutY="54.0" prefHeight="28.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #5b3f5b; -fx-border-radius: 5;" />
+            <Label layoutX="443.0" layoutY="29.0" text="Selectionner une heure" textFill="#5b3f5b">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="213.0" layoutY="122.0" text="Selectionner le type du Rendez-vous" textFill="#5b3f5b">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="213.0" layoutY="208.0" text="Indiquer la duree du Rendez-vous" textFill="#5b3f5b">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="submitButton" layoutX="299.0" layoutY="299.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: #5b3f5b; -fx-border-color: #5b3f5b; -fx-border-radius: 5; -fx-background-radius: 5;" text="Suivant" textFill="WHITE" onAction="#handleSubmitButtonAction">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="durationText" layoutX="216.0" layoutY="234.0" prefHeight="28.0" prefWidth="267.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #5b3f5b; -fx-border-radius: 5;" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

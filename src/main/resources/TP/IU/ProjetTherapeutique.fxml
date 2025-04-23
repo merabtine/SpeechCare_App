@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.ProjetTherapeutiqueController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="278.0" style="-fx-background-color: #5b3f5b;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="projectText" fill="WHITE" layoutX="81.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="therapeuticText" fill="WHITE" layoutX="19.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thérapeutique">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="logoImage" fitHeight="176.0" fitWidth="274.0" layoutX="2.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/3-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c3bcdb;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="instructionText1" layoutX="50.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez indiquer la procédure à suivre">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="instructionText2" layoutX="72.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pour traiter les troubles du patient">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <VBox fx:id="procedureContainer" layoutX="47.0" layoutY="128.0" prefHeight="262.0" prefWidth="324.0" style="-fx-background-color: transparent; -fx-border-color: #5b3f5b;">
+                <children>
+                    <TextArea fx:id="procedureTextArea" layoutX="47.0" layoutY="128.0" prefHeight="262.0" prefWidth="324.0" style="-fx-control-inner-background: #c3bcdb; -fx-border-color:#5b3f5b;" wrapText="true"  />
+                </children>
+            </VBox>
+            <Button fx:id="confirmButton" layoutX="120.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #5b3f5b;" text="Prendre en charge" textFill="WHITE" onAction="#handleConfirmButtonAction">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

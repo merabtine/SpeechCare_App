@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.QRLController">
+    <top>
+        <AnchorPane prefHeight="198.0" prefWidth="256.0" style="-fx-background-color: ffff;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="198.0" fitWidth="256.0" layoutX="194.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/Screenshot%202024-05-24%20154907.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="home" fitHeight="20.0" fitWidth="37.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleButtonMenu">
+                     <image>
+                        <Image url="@img/130831.png" />
+                     </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane layoutX="0.0" layoutY="0.0" prefHeight="300.0" prefWidth="700.0" fitToWidth="true" fitToHeight="true">
+                    <content>
+                        <VBox fx:id="questionsContainer" spacing="5.0" style="-fx-padding: 10; -fx-background-color: #dcdef7;">
+                            <StackPane alignment="CENTER">
+                                <Text fill="#4b48c6" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions à réponse libre">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Text>
+                            </StackPane>
+                            <!-- Questions QRL seront ajoutées ici dynamiquement -->
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

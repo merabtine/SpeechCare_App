@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.AjouterQuestionAnamneseController">
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane prefHeight="497.0" prefWidth="310.0">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="499.0" prefWidth="276.0" style="-fx-background-color: #c3bcdb;">
+                     <children>
+                        <ImageView fitHeight="253.0" fitWidth="287.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/4.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#4b3887" layoutX="24.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une question">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#4b3887" layoutX="68.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="d'anamnèse">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="home" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="38.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleButtonMenu">
+                           <image>
+                              <Image url="@img/image.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="284.0" layoutY="-2.0" prefHeight="484.0" prefWidth="401.0" style="-fx-background-color: #e4f2fa;">
+                     <children>
+                        <Text layoutX="32.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Ajouter une question d'anamnèse pour:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="enfantRadioButton" layoutX="46.0" layoutY="85.0" mnemonicParsing="false" text="Enfant">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="adulteRadioButton" layoutX="213.0" layoutY="84.0" mnemonicParsing="false" text="Adulte">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <Text layoutX="31.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Choisir la catégorie:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="categoryChoiceBox" layoutX="40.0" layoutY="189.0" prefWidth="150.0" style="-fx-background-color: #c3bcdb;" />
+                        <Text layoutX="26.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Saisir l'enoncé de la question:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="questionTextField1" layoutX="36.0" layoutY="283.0" prefHeight="27.0" prefWidth="356.0" style="-fx-background-color: transparent; -fx-border-color: #4b3887; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="questionTextField2" layoutX="35.0" layoutY="338.0" prefHeight="27.0" prefWidth="356.0" style="-fx-background-color: transparent; -fx-border-color: #4b3887; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="confirmer" layoutX="145.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleConfirmerButton" style="-fx-background-color: #c3bcdb;" text="Confirmer">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

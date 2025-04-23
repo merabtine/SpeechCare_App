@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TP.Control.ConsulterRDV">
+   <top>
+      <AnchorPane prefHeight="194.0" prefWidth="700.0" style="-fx-background-color: #5b3f5b; -fx-background-radius: 0 0 30 30;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="150.0" layoutX="274.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/rendez-vous.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="247.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Rendez-vous" wrappingWidth="220.2646484375">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="home" fitHeight="51.0" fitWidth="80.0" layoutX="33.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleButtonMenu">
+               <image>
+                  <Image url="@img/image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="683.0">
+               <children>
+                  <TableView fx:id="RDVTableView" layoutX="38.0" layoutY="33.0" prefHeight="230.0" prefWidth="616.0" style="-fx-background-color: white; -fx-border-color: #5a215b;">
+                    <columns>
+                      <TableColumn fx:id="TypeColumn" prefWidth="152.66664632161456" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: #5a215b; -fx-alignment: CENTER;" text="Type du Rendez-vous" />
+                      <TableColumn fx:id="DateColumn" prefWidth="152.66664632161456" style="-fx-background-color: white; -fx-border-width: 0 0 1 1; -fx-border-color: #5a215b; -fx-alignment: CENTER;" text="Date du Rendez-vous" />
+                        <TableColumn fx:id="HeureColumn" prefWidth="152.66664632161456" style="-fx-background-color: white; -fx-border-color: #5a215b; -fx-border-width: 0 0 1 1; -fx-alignment: CENTER;" text="Heure du Rendez-vous" />
+                        <TableColumn fx:id="EntamerColumn" prefWidth="140.66664632161456" style="-fx-background-color: white; -fx-border-color: #5a215b; -fx-border-width: 0 0 1 1; -fx-alignment: CENTER;" text="Entamer la séance" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+   </bottom>
+</BorderPane>
